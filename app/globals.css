@@ -20,7 +20,7 @@
   --accent: oklch(0.55 0.12 250); /* Blue accent color */
   --accent-foreground: oklch(1 0 0); /* White text on accent */
   /* Improved destructive color contrast for better accessibility */
-  --destructive: oklch(0.45 0.2 25); /* Darker red for better contrast in light mode */
+  --destructive: oklch(0.25 0.2 25); /* Much darker red for better contrast in light mode */
   --destructive-foreground: oklch(1 0 0); /* White text on destructive */
   --border: oklch(0.9 0 0); /* Light gray borders */
   --input: oklch(0.98 0 0); /* Light input background */

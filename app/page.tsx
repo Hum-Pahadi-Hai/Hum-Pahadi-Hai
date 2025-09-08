@@ -29,6 +29,9 @@ export default function HomePage() {
             <Link href="/diseases" className="hover:text-accent transition-colors">
               Diseases
             </Link>
+            <Link href="/diet" className="hover:text-accent transition-colors">
+              Diet & Nutrition
+            </Link>
             <Link href="/prevention" className="hover:text-accent transition-colors">
               Prevention
             </Link>
@@ -45,7 +48,7 @@ export default function HomePage() {
       </header>
 
       {/* Medical Disclaimer Banner */}
-      <div className="bg-destructive/10 border-b border-destructive/20 py-2">
+      <div className="bg-white border-b border-destructive/30 py-2">
         <div className="container mx-auto px-4">
           <p className="text-sm text-center text-destructive font-medium">
             ⚠️ Medical Disclaimer: This website is for informational purposes only. Always consult a healthcare provider
@@ -60,7 +63,7 @@ export default function HomePage() {
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
             Your Trusted Medical Information Platform
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 text-pretty">
+          <p className="text-xl text-foreground mb-8 text-pretty">
             Access comprehensive information about diseases, symptoms, treatments, and prevention strategies. Get
             reliable medical guidance at your fingertips.
           </p>
@@ -107,7 +110,7 @@ export default function HomePage() {
                   <Search className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Symptom Checker</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-foreground">
                   Enter your symptoms and get possible conditions with detailed information
                 </CardDescription>
               </CardHeader>
@@ -119,7 +122,7 @@ export default function HomePage() {
                   <BookOpen className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Disease Database</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-foreground">
                   Comprehensive information on diseases, causes, symptoms, and treatments
                 </CardDescription>
               </CardHeader>
@@ -131,7 +134,9 @@ export default function HomePage() {
                   <Shield className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Prevention Guide</CardTitle>
-                <CardDescription>Learn how to prevent diseases and maintain optimal health</CardDescription>
+                <CardDescription className="text-foreground">
+                  Learn how to prevent diseases and maintain optimal health
+                </CardDescription>
               </CardHeader>
             </Card>
 
@@ -141,7 +146,9 @@ export default function HomePage() {
                   <Heart className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>First Aid Tips</CardTitle>
-                <CardDescription>Emergency first aid procedures and when to seek immediate help</CardDescription>
+                <CardDescription className="text-foreground">
+                  Emergency first aid procedures and when to seek immediate help
+                </CardDescription>
               </CardHeader>
             </Card>
 
@@ -151,7 +158,9 @@ export default function HomePage() {
                   <BookOpen className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Medical Glossary</CardTitle>
-                <CardDescription>Medical terms explained in simple, easy-to-understand language</CardDescription>
+                <CardDescription className="text-foreground">
+                  Medical terms explained in simple, easy-to-understand language
+                </CardDescription>
               </CardHeader>
             </Card>
 
@@ -161,7 +170,9 @@ export default function HomePage() {
                   <Users className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle>Expert Reviewed</CardTitle>
-                <CardDescription>All content reviewed by medical professionals for accuracy</CardDescription>
+                <CardDescription className="text-foreground">
+                  All content reviewed by medical professionals for accuracy
+                </CardDescription>
               </CardHeader>
             </Card>
           </div>
@@ -174,7 +185,7 @@ export default function HomePage() {
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">Browse by Category</h3>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Button variant="outline" className="h-20 flex-col gap-2 bg-transparent" asChild>
+            <Button variant="outline" className="h-20 flex-col gap-2 bg-background text-foreground" asChild>
               <Link href="/diseases?category=infectious">
                 <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
                   <div className="w-4 h-4 bg-primary rounded-full"></div>
@@ -183,7 +194,7 @@ export default function HomePage() {
               </Link>
             </Button>
 
-            <Button variant="outline" className="h-20 flex-col gap-2 bg-transparent" asChild>
+            <Button variant="outline" className="h-20 flex-col gap-2 bg-background text-foreground" asChild>
               <Link href="/diseases?category=chronic">
                 <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
                   <Heart className="w-4 h-4 text-primary" />
@@ -192,7 +203,7 @@ export default function HomePage() {
               </Link>
             </Button>
 
-            <Button variant="outline" className="h-20 flex-col gap-2 bg-transparent" asChild>
+            <Button variant="outline" className="h-20 flex-col gap-2 bg-background text-foreground" asChild>
               <Link href="/diseases?category=injuries">
                 <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
                   <Shield className="w-4 h-4 text-primary" />
@@ -201,7 +212,7 @@ export default function HomePage() {
               </Link>
             </Button>
 
-            <Button variant="outline" className="h-20 flex-col gap-2 bg-transparent" asChild>
+            <Button variant="outline" className="h-20 flex-col gap-2 bg-background text-foreground" asChild>
               <Link href="/diseases?category=mental">
                 <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
                   <div className="w-4 h-4 bg-primary rounded"></div>
@@ -214,13 +225,13 @@ export default function HomePage() {
       </section>
 
       {/* Emergency Contact */}
-      <section className="py-12 px-4 bg-destructive/5 border-t border-destructive/20">
+      <section className="py-12 px-4 bg-muted/20 border-t border-destructive/20">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Phone className="h-6 w-6 text-destructive" />
             <h3 className="text-xl font-bold text-destructive">Medical Emergency?</h3>
           </div>
-          <p className="text-muted-foreground mb-4">
+          <p className="text-foreground mb-4">
             If you're experiencing a medical emergency, don't use this website. Call emergency services immediately.
           </p>
           <Button variant="destructive" size="lg">

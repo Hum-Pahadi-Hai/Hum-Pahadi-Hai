@@ -15,6 +15,7 @@ export function MobileNav() {
     { href: "/", label: "Home" },
     { href: "/symptom-checker", label: "Symptom Checker" },
     { href: "/diseases", label: "Diseases" },
+    { href: "/diet", label: "Diet & Nutrition" },
     { href: "/prevention", label: "Prevention" },
     { href: "/glossary", label: "Glossary" },
     { href: "/contact", label: "Contact" },
