@@ -235,7 +235,7 @@ export default function HomePage() {
             If you're experiencing a medical emergency, don't use this website. Call emergency services immediately.
           </p>
           <Button variant="destructive" size="lg">
-            Emergency: Call 911
+            Emergency: Call 112 / 108
           </Button>
         </div>
       </section>
