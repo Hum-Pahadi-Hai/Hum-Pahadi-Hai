@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+import { AppWrapper } from "@/components/app-wrapper"
 
 export const metadata: Metadata = {
   title: "MediGuide by Hemu - Trusted Medical Information Platform",
@@ -23,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
+        <Suspense fallback={null}>
+          <AppWrapper>{children}</AppWrapper>
+        </Suspense>
         <Analytics />
       </body>
     </html>
