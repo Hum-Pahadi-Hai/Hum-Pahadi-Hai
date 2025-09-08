@@ -40,13 +40,24 @@ export function GlobalSearch({
     const results: SearchResult[] = []
     const query = searchTerm.toLowerCase()
 
+    console.log("[v0] Searching for:", query)
+
     // Search diseases
     diseases.forEach((disease) => {
-      if (
-        disease.name.toLowerCase().includes(query) ||
-        disease.description.toLowerCase().includes(query) ||
-        disease.symptoms.some((symptom) => symptom.toLowerCase().includes(query))
-      ) {
+      const nameMatch = disease.name.toLowerCase().includes(query)
+      const descMatch = disease.description.toLowerCase().includes(query)
+      const symptomMatch = disease.symptoms.some((symptom) => symptom.toLowerCase().includes(query))
+
+      if (query === "headache") {
+        console.log("[v0] Disease:", disease.name, {
+          nameMatch,
+          descMatch,
+          symptomMatch,
+          symptoms: disease.symptoms,
+        })
+      }
+
+      if (nameMatch || descMatch || symptomMatch) {
         results.push({
           id: disease.id,
           title: disease.name,
@@ -59,7 +70,13 @@ export function GlobalSearch({
 
     // Search symptoms
     symptoms.forEach((symptom) => {
-      if (symptom.name.toLowerCase().includes(query)) {
+      const match = symptom.name.toLowerCase().includes(query)
+
+      if (query === "headache") {
+        console.log("[v0] Symptom:", symptom.name, "matches:", match)
+      }
+
+      if (match) {
         results.push({
           id: symptom.id,
           title: symptom.name,
@@ -86,6 +103,8 @@ export function GlobalSearch({
         })
       }
     })
+
+    console.log("[v0] Total results found:", results.length)
 
     return results.slice(0, 10) // Limit to 10 results
   }, [searchTerm])

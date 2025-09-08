@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Heart, Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react"
+import { Heart, Mail, Phone, MapPin, Clock, Send, CheckCircle, Stethoscope, Shield, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -41,8 +41,8 @@ export default function ContactPage() {
           <Link href="/" className="flex items-center space-x-2">
             <Heart className="h-8 w-8" />
             <div>
-              <h1 className="text-xl font-bold">MediGuide</h1>
-              <p className="text-xs opacity-90">by Hemu</p>
+              <h1 className="text-xl font-bold">MediGuide by Hemu</h1>
+              <p className="text-xs opacity-90">Your Complete Medical Companion</p>
             </div>
           </Link>
 
@@ -54,16 +54,16 @@ export default function ContactPage() {
               Symptom Checker
             </Link>
             <Link href="/diseases" className="hover:text-accent transition-colors">
-              Diseases
+              Medical Database
             </Link>
             <Link href="/prevention" className="hover:text-accent transition-colors">
-              Prevention
+              Prevention & Diet
             </Link>
             <Link href="/glossary" className="hover:text-accent transition-colors">
-              Glossary
+              Medical Glossary
             </Link>
             <Link href="/contact" className="text-accent font-medium">
-              Contact
+              Contact & Support
             </Link>
           </nav>
 
@@ -75,7 +75,8 @@ export default function ContactPage() {
       <div className="bg-destructive/10 border-b border-destructive/20 py-2">
         <div className="container mx-auto px-4">
           <p className="text-sm text-center text-destructive font-medium">
-            ⚠️ For medical emergencies, call 911 immediately. This contact form is not for urgent medical questions.
+            ⚠️ MEDICAL EMERGENCY? Call 911 immediately. MediGuide does not replace professional medical diagnosis or
+            treatment.
           </p>
         </div>
       </div>
@@ -83,11 +84,44 @@ export default function ContactPage() {
       <div className="container mx-auto px-4 py-8">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-4">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-foreground mb-4">Contact Your Medical Companion</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have questions about MediGuide? We're here to help. Reach out to us for support, feedback, or general
-            inquiries.
+            Have questions about medical conditions, symptoms, or need support with MediGuide? Our comprehensive medical
+            knowledge base team is here to help with your health information needs.
           </p>
+        </div>
+
+        {/* Medical Companion Features Section */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <Card className="text-center">
+            <CardContent className="pt-6">
+              <Stethoscope className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Comprehensive Medical Database</h3>
+              <p className="text-sm text-muted-foreground">
+                Access information on diseases, conditions, symptoms, treatments, and prevention strategies.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="text-center">
+            <CardContent className="pt-6">
+              <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Trusted Health Information</h3>
+              <p className="text-sm text-muted-foreground">
+                Medically reviewed content with proper disclaimers and guidance to consult healthcare professionals.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="text-center">
+            <CardContent className="pt-6">
+              <Users className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Community Support</h3>
+              <p className="text-sm text-muted-foreground">
+                Get help navigating our medical resources and finding the health information you need.
+              </p>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -97,10 +131,11 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Mail className="h-5 w-5" />
-                  Get in Touch
+                  Medical Information Support
                 </CardTitle>
                 <CardDescription>
-                  We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                  Need help with medical information, have feedback about our database, or questions about using
+                  MediGuide? We're here to assist you.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -113,7 +148,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <Mail className="h-5 w-5 text-primary mt-0.5" />
                   <div>
-                    <p className="font-medium">Email</p>
+                    <p className="font-medium">Medical Information Support</p>
                     <p className="text-sm text-muted-foreground">support@mediguide.com</p>
                   </div>
                 </div>
@@ -121,9 +156,9 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
                   <div>
-                    <p className="font-medium">Phone</p>
+                    <p className="font-medium">Support Helpline</p>
                     <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-xs text-muted-foreground">Mon-Fri, 9AM-5PM EST</p>
+                    <p className="text-xs text-muted-foreground">Mon-Fri, 9AM-5PM EST (Non-emergency only)</p>
                   </div>
                 </div>
 
@@ -157,12 +192,13 @@ export default function ContactPage() {
 
             <Card className="border-destructive/20">
               <CardHeader>
-                <CardTitle className="text-destructive">Emergency Notice</CardTitle>
+                <CardTitle className="text-destructive">Medical Emergency Notice</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  If you're experiencing a medical emergency, do not use this contact form. Call emergency services
-                  immediately.
+                  MediGuide is for educational purposes only and does not provide medical diagnosis or treatment. If
+                  you're experiencing a medical emergency, do not use this contact form or search our database. Call
+                  emergency services immediately.
                 </p>
                 <Button variant="destructive" className="w-full">
                   <Phone className="mr-2 h-4 w-4" />
@@ -176,8 +212,11 @@ export default function ContactPage() {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle>Send us a Message</CardTitle>
-                <CardDescription>Fill out the form below and we'll get back to you within 24-48 hours.</CardDescription>
+                <CardTitle>Get Medical Information Support</CardTitle>
+                <CardDescription>
+                  Have questions about medical conditions, need help using our database, or want to provide feedback?
+                  Fill out the form below and we'll get back to you within 24-48 hours.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 {formSubmitted ? (
@@ -222,11 +261,12 @@ export default function ContactPage() {
                           <SelectValue placeholder="Select a subject" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="general">General Inquiry</SelectItem>
-                          <SelectItem value="feedback">Feedback</SelectItem>
+                          <SelectItem value="medical-info">Medical Information Question</SelectItem>
+                          <SelectItem value="database">Database Content Inquiry</SelectItem>
+                          <SelectItem value="symptom-checker">Symptom Checker Support</SelectItem>
+                          <SelectItem value="feedback">Platform Feedback</SelectItem>
                           <SelectItem value="technical">Technical Support</SelectItem>
-                          <SelectItem value="content">Content Question</SelectItem>
-                          <SelectItem value="partnership">Partnership</SelectItem>
+                          <SelectItem value="partnership">Medical Partnership</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
@@ -246,9 +286,10 @@ export default function ContactPage() {
 
                     <div className="bg-muted/30 p-4 rounded-lg">
                       <p className="text-sm text-muted-foreground">
-                        <strong>Please note:</strong> This form is for general inquiries only. Do not include personal
-                        health information or seek medical advice through this form. For medical questions, please
-                        consult with a healthcare professional.
+                        <strong>Important:</strong> This form is for general inquiries about MediGuide's medical
+                        information database only. Do not include personal health information, seek medical advice, or
+                        report symptoms through this form. For medical questions, please consult with a qualified
+                        healthcare professional. MediGuide does not replace professional medical diagnosis or treatment.
                       </p>
                     </div>
 
@@ -273,20 +314,22 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  No, MediGuide is for educational purposes only. Always consult with qualified healthcare professionals
-                  for medical advice, diagnosis, and treatment.
+                  Absolutely not. MediGuide is your educational medical companion for learning about health conditions,
+                  symptoms, and treatments. Always consult with qualified healthcare professionals for medical advice,
+                  diagnosis, and treatment decisions.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">How accurate is the information on MediGuide?</CardTitle>
+                <CardTitle className="text-lg">How comprehensive is MediGuide's medical database?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Our content is reviewed by medical professionals and based on current medical literature. However,
-                  medical knowledge evolves, so always verify with your healthcare provider.
+                  Our database covers major diseases, infections, injuries, disorders, and medical conditions from
+                  common colds to rare disorders. Each entry includes causes, symptoms, treatments, prevention, and
+                  dietary advice, all reviewed by medical professionals.
                 </p>
               </CardContent>
             </Card>
@@ -297,8 +340,8 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Yes! We welcome feedback and suggestions. Use the contact form above with "Content Question" as the
-                  subject to share your input.
+                  Yes! We welcome feedback and suggestions. Use the contact form above with "Database Content Inquiry"
+                  as the subject to share your input.
                 </p>
               </CardContent>
             </Card>
