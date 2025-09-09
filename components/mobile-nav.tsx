@@ -55,7 +55,7 @@ export function MobileNav() {
 
           <div className="mt-auto pt-6 border-t">
             <Button variant="destructive" className="w-full">
-              Emergency: Call 911
+              Emergency: Call 112 / 108
             </Button>
           </div>
         </div>

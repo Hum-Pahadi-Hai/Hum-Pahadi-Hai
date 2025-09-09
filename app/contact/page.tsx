@@ -75,8 +75,8 @@ export default function ContactPage() {
       <div className="bg-destructive/10 border-b border-destructive/20 py-2">
         <div className="container mx-auto px-4">
           <p className="text-sm text-center text-destructive font-medium">
-            ⚠️ MEDICAL EMERGENCY? Call 911 immediately. MediGuide does not replace professional medical diagnosis or
-            treatment.
+            ⚠️ MEDICAL EMERGENCY? Call 112 / 108 immediately. MediGuide does not replace professional medical diagnosis
+            or treatment.
           </p>
         </div>
       </div>
@@ -202,7 +202,7 @@ export default function ContactPage() {
                 </p>
                 <Button variant="destructive" className="w-full">
                   <Phone className="mr-2 h-4 w-4" />
-                  Emergency: Call 911
+                  Emergency: Call 112 / 108
                 </Button>
               </CardContent>
             </Card>

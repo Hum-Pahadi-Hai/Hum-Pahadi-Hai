@@ -67,7 +67,7 @@ export default function DietDetailPage({ params }: DietDetailPageProps) {
 
             <Button variant="destructive" size="sm" className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              Emergency: 911
+              Emergency: 112 / 108
             </Button>
           </div>
         </div>

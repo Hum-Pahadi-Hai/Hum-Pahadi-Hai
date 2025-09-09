@@ -222,7 +222,7 @@ export default function DiseasePage({ params }: DiseasePageProps) {
                 <Separator className="my-4" />
                 <Button variant="destructive" className="w-full">
                   <Phone className="mr-2 h-4 w-4" />
-                  Emergency: Call 911
+                  Emergency: Call 112 / 108
                 </Button>
               </CardContent>
             </Card>
